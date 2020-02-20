@@ -15,15 +15,6 @@ class VendinhaDoZe:
         self.valor_do_refrigerante = 2.50
     # Temos aqui alguns produtos que o a vendinha do Zé comercializa
 
-    
-    def realizar_pedido(self):
-    # Temos aqui um método que coletará do cliente, as informações para montar um pedido
-        self.salgado = input('Informe um salgado [coxinha/pastel/enroladinho]: ')
-        self.quantidade_de_salgados = input('Informe quantas unidades de salgado: ')
-        self.refrigerante = input('Informe um refrigerante [pepsi/sukita/guaraná]: ')
-        self.quantidade_de_refrigerantes = input('Informe quantas unidades de refrigerante: ')
-        # Temos aqui os input's para coletarmos as informações de nossos clientes
-
 
     def imprime_pedido(self):
         # Temos aqui um método que imprime o pedido realizado pelo cliente, para isso ele chama outros dois
@@ -36,6 +27,15 @@ class VendinhaDoZe:
         print(f'{self.quantidade_de_refrigerantes} unidades de {self.refrigerante} no valor de {valor_total_dos_refrigerantes}')
         print(f'O valor total da compra é de R$ {valor_total_da_compra}')
 
+
+    def realizar_pedido(self):
+    # Temos aqui um método que coletará do cliente, as informações para montar um pedido
+        self.salgado = input('Informe um salgado [coxinha/pastel/enroladinho]: ')
+        self.quantidade_de_salgados = input('Informe quantas unidades de salgado: ')
+        self.refrigerante = input('Informe um refrigerante [pepsi/sukita/guaraná]: ')
+        self.quantidade_de_refrigerantes = input('Informe quantas unidades de refrigerante: ')
+        # Temos aqui os input's para coletarmos as informações de nossos clientes
+        
 
     def calculo_valor_total_da_compra(self, valor_total_dos_salgados, valor_total_dos_refrigerantes):
     # Temos aqui um método que recebe o valor total de salgados, o valor total de refrigerantes, calcula e retorna 
