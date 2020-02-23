@@ -51,7 +51,8 @@ class TestIntroducaoAoMock(TestCase):
 # Com a instalação do coverage, conseguiremos melhorar a visualização de nossos testes
 # vamos visualizar quantos testes foram executados:
 
-    # Execute no terminal: py -m unittest discover "ou" python -m unittest discover
+    # Execute no terminal: py -m coverage run -m unittest discover "ou" 
+    # coverage run -m unittest discover
 
     # ***************************** Resposta do terminal *****************************
 

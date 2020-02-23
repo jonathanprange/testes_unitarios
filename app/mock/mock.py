@@ -19,9 +19,9 @@ class VendinhaDoZe:
     def imprime_pedido(self):
         # Temos aqui um método que imprime o pedido realizado pelo cliente, para isso ele chama outros dois
         # métodos da classe, para receber os valores totais para imprimir
-        valor_total_dos_refrigerantes = self.calculo_valor_total_refrigerantes()
-        valor_total_dos_salgados = self.calculo_valor_total_salgados()
-        valor_total_da_compra = self.calculo_valor_total_da_compra(valor_total_dos_salgados, valor_total_dos_refrigerantes)
+        valor_total_dos_refrigerantes = calculo_valor_total_refrigerantes(self.quantidade_de_refrigerantes, self.valor_do_refrigerante)
+        valor_total_dos_salgados = calculo_valor_total_salgados(self.quantidade_de_salgados, self.valor_do_salgado)
+        valor_total_da_compra = calculo_valor_total_da_compra(valor_total_dos_salgados, valor_total_dos_refrigerantes)
         print('Seu pedido é: ')
         print(f'{self.quantidade_de_salgados} unidades de {self.salgado} no valor de {valor_total_dos_salgados}')
         print(f'{self.quantidade_de_refrigerantes} unidades de {self.refrigerante} no valor de {valor_total_dos_refrigerantes}')
@@ -37,28 +37,28 @@ class VendinhaDoZe:
         # Temos aqui os input's para coletarmos as informações de nossos clientes
         
 
-    def calculo_valor_total_da_compra(self, valor_total_dos_salgados, valor_total_dos_refrigerantes):
-    # Temos aqui um método que recebe o valor total de salgados, o valor total de refrigerantes, calcula e retorna 
-    # o valor total da compra.
-        valor_total_da_compra = valor_total_dos_salgados + valor_total_dos_refrigerantes
-        return valor_total_da_compra
-
-
-    def calculo_valor_total_salgados(self):
-    # Temos aqui um método que calcula o valor total dos salgados solicitados pelo cliente e retorna esse valor
-        valor_total_dos_salgados = self.quantidade_de_salgados * self.valor_do_salgado
-        return valor_total_dos_salgados
-    
-
-    def calculo_valor_total_refrigerantes(self):
-    # Temos aqui um método que calcula o valor total dos refrigerantes solicitados pelo cliente e retorna esse valor
-        valor_total_dos_refrigerantes = self.quantidade_de_refrigerantes * self.valor_do_refrigerante
-        return valor_total_dos_refrigerantes
-
-
-# Temos aqui uma classe completa, com diversos atributos e métodos, vamos testar cada um deles individualmente
+# Temos aqui uma classe completa, com atributos e métodos, vamos testar cada um deles individualmente
 # não será necessário criarmos todo nosso programa para garantirmos de cada funcionalidade da nossa classe, 
 # com o teste unitário e o mock, vamos testar e simular cada comportamento isoladamente.
+
+
+def calculo_valor_total_da_compra(valor_total_dos_salgados, valor_total_dos_refrigerantes):
+# Temos aqui um método que recebe o valor total de salgados, o valor total de refrigerantes, calcula e retorna 
+# o valor total da compra.
+    valor_total_da_compra = valor_total_dos_salgados + valor_total_dos_refrigerantes
+    return valor_total_da_compra
+
+
+def calculo_valor_total_salgados(quantidade_de_salgados, valor_do_salgado):
+# Temos aqui um método que calcula o valor total dos salgados solicitados pelo cliente e retorna esse valor
+    valor_total_dos_salgados = quantidade_de_salgados * valor_do_salgado
+    return valor_total_dos_salgados
+
+
+def calculo_valor_total_refrigerantes(quantidade_de_refrigerantes, valor_do_refrigerante):
+# Temos aqui um método que calcula o valor total dos refrigerantes solicitados pelo cliente e retorna esse valor
+    valor_total_dos_refrigerantes = quantidade_de_refrigerantes * valor_do_refrigerante
+    return valor_total_dos_refrigerantes
 
 
 # Vamos começar com o test_mock_1.py dentro da pasta tests

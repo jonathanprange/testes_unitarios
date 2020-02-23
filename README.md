@@ -22,3 +22,6 @@
 
 # Aula 6
     # 6. mock/mock.py e testes/test_mock_1.py
+    # 6. mock/mock.py e testes/test_mock_2.py
+    # 6. mock/mock.py e testes/test_mock_3.py
+    # 6. mock/mock.py e testes/test_mock_4.py
