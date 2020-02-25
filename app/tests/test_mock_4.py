@@ -49,7 +49,6 @@ class TestComMockTodosComportamentos(TestCase):
         mock_valor_total_salgados.assert_called_once()
         mock_valor_total_da_compra.assert_called_once_with(100, 100)
 
-        mock_print
         mock_print.assert_has_calls([call('Seu pedido é: '),
                                     call('0 unidades de  no valor de 100'),
                                     call('0 unidades de  no valor de 100'),
