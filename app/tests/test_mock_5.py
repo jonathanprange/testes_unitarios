@@ -16,7 +16,7 @@ class TestInputComMock(TestCase):
         nova_vendinha_do_ze = VendinhaDoZe()
 
         # Agora iremos ensinar ao nosso mock, como simular o comportamento do método input
-        mock_input.side_effects = ['coxinha', 2, 'pepsi', 4]
+        mock_input.side_effect = ['coxinha', 2, 'pepsi', 4]
             # Como o mesmo método é chamado mais de uma vez, iremos ensinar ao nosso mock
             # como se comportar cada vez que ele for chamado, e fazemos isso através do
             # side_effects, atribuímos então, através de uma lista, todos os retornos

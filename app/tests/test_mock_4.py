@@ -27,7 +27,7 @@ class TestComMockTodosComportamentos(TestCase):
         mock_valor_total_da_compra.return_value = 200
 
         # Agora iremos ensinar ao nosso mock, como simular o comportamento do método print
-        mock_print.side_effects = ['print_1','print_2','print_3','print_4']
+        mock_print.side_effect = ['print_1','print_2','print_3','print_4']
             # Como o mesmo método é chamado mais de uma vez, iremos ensinar ao nosso mock
             # como se comportar cada vez que ele for chamado, e fazemos isso através do
             # side_effects, atribuímos então, através de uma lista, todos os retornos
